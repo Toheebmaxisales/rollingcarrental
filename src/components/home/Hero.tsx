@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Shield, Clock, MapPin, Award } from 'lucide-react';
+import heroCar from '@/assets/cars/car-2.jpeg';
 
 const heroSlides = [
   {
@@ -39,7 +40,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroCar} 
+          alt="Premium Car" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/60" />
+      </div>
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 border border-primary rounded-full" />
@@ -74,7 +85,7 @@ const Hero = () => {
                           </span>
                         ))}
                       </h1>
-                      <p className="text-secondary-foreground/80 text-lg mt-4 max-w-lg animate-slide-up delay-200">
+                      <p className="text-secondary-foreground/90 text-lg mt-4 max-w-lg animate-slide-up delay-200">
                         {slide.description}
                       </p>
                     </>
@@ -112,21 +123,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div className="hidden lg:flex items-center justify-center">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center animate-float">
-                <div className="w-60 h-60 rounded-full bg-gradient-to-br from-primary/40 to-primary/10 flex items-center justify-center">
-                  <div className="w-40 h-40 rounded-full bg-primary flex items-center justify-center">
-                    <span className="font-display text-6xl font-bold text-primary-foreground">R</span>
-                  </div>
-                </div>
-              </div>
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/20 rounded-2xl rotate-12 animate-float delay-300" />
-              <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-primary/30 rounded-full animate-float delay-500" />
-            </div>
-          </div>
+          {/* Empty right side - image is now background */}
+          <div className="hidden lg:block" />
         </div>
 
         {/* Highlights Bar */}
@@ -134,7 +132,7 @@ const Hero = () => {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 justify-center md:justify-start bg-secondary-foreground/5 rounded-xl p-4 animate-scale-in"
+              className="flex items-center gap-3 justify-center md:justify-start bg-secondary-foreground/10 backdrop-blur-sm rounded-xl p-4 animate-scale-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <item.icon className="w-5 h-5 text-primary" />

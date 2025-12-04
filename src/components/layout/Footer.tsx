@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import logo from '@/assets/logo.jpeg';
 
 const Footer = () => {
   return (
@@ -8,10 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="font-display font-bold text-primary-foreground text-lg">R</span>
-              </div>
+            <div className="flex items-center gap-3">
+              <img 
+                src={logo} 
+                alt="Rolling Car Rental" 
+                className="h-12 w-auto object-contain"
+              />
               <div className="flex flex-col">
                 <span className="font-display font-bold text-lg leading-tight text-secondary-foreground">Rolling</span>
                 <span className="text-xs text-secondary-foreground/70 -mt-1">Car Rental</span>
