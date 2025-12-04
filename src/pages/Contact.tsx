@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import heroCar from '@/assets/cars/car-1.jpeg';
 
 const contactInfo = [
   {
@@ -77,10 +78,8 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    // Create WhatsApp message with form data
     const whatsappMessage = `
 *New Booking Request*
 Name: ${formData.name}
@@ -91,7 +90,6 @@ Preferred Date: ${formData.date}
 Message: ${formData.message}
     `.trim();
 
-    // Open WhatsApp with the message
     const whatsappUrl = `https://wa.me/2347068999680?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
 
@@ -114,7 +112,15 @@ Message: ${formData.message}
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-secondary relative overflow-hidden">
+      <section className="pt-32 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={heroCar} 
+            alt="Contact Us" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/70" />
+        </div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-20 w-64 h-64 border border-primary rounded-full" />
           <div className="absolute bottom-10 left-10 w-40 h-40 border border-primary rounded-full" />
@@ -127,7 +133,7 @@ Message: ${formData.message}
             <h1 className="font-display text-4xl md:text-5xl font-bold text-secondary-foreground mb-6 animate-slide-up">
               Let's Get You <span className="text-primary">Rolling</span>
             </h1>
-            <p className="text-secondary-foreground/80 text-lg animate-slide-up delay-100">
+            <p className="text-secondary-foreground/90 text-lg animate-slide-up delay-100">
               Ready to book? Have questions? We're here to help. Reach out to us through any of the channels below 
               or fill out the booking request form.
             </p>
@@ -316,6 +322,36 @@ Message: ${formData.message}
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Google Maps Section */}
+          <div className="mt-16">
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-6 text-center">
+              Find Us on <span className="text-primary">Google Maps</span>
+            </h2>
+            <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3366247393387!2d3.3517579!3d6.6027778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9227a6e0b1e9%3A0x8f6f5f6f6f6f6f6f!2sPoatson%20Complex%2C%20254%20Agege%20Motor%20Rd%2C%20Ikeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1701696000000!5m2!1sen!2sng"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Rolling Car Rental Location"
+              />
+            </div>
+            <div className="text-center mt-4">
+              <a
+                href="https://maps.app.goo.gl/jSynJc3eirAbPThY8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              >
+                <MapPin className="w-4 h-4" />
+                Open in Google Maps
+              </a>
             </div>
           </div>
         </div>

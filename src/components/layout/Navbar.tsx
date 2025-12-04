@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,19 +31,25 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-background/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+          : 'bg-secondary/95 backdrop-blur-sm'
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="font-display font-bold text-primary-foreground text-lg">R</span>
-            </div>
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={logo} 
+              alt="Rolling Car Rental" 
+              className="h-12 w-auto object-contain"
+            />
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg leading-tight">Rolling</span>
-              <span className="text-xs text-muted-foreground -mt-1">Car Rental</span>
+              <span className={`font-display font-bold text-lg leading-tight ${isScrolled ? 'text-foreground' : 'text-secondary-foreground'}`}>
+                Rolling
+              </span>
+              <span className={`text-xs -mt-1 ${isScrolled ? 'text-muted-foreground' : 'text-secondary-foreground/70'}`}>
+                Car Rental
+              </span>
             </div>
           </Link>
 
@@ -55,7 +62,9 @@ const Navbar = () => {
                 className={`relative font-medium transition-colors duration-300 ${
                   isActive(link.path)
                     ? 'text-primary'
-                    : 'text-foreground hover:text-primary'
+                    : isScrolled 
+                      ? 'text-foreground hover:text-primary'
+                      : 'text-secondary-foreground hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -68,7 +77,10 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="tel:07068999680" className="flex items-center gap-2 text-sm">
+            <a 
+              href="tel:07068999680" 
+              className={`flex items-center gap-2 text-sm ${isScrolled ? 'text-foreground' : 'text-secondary-foreground'}`}
+            >
               <Phone className="w-4 h-4 text-primary" />
               <span>07068999680</span>
             </a>
@@ -82,7 +94,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
+            className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-secondary-foreground'}`}
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
