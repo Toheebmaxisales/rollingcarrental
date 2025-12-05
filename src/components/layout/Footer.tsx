@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import logo from '@/assets/logo.jpeg';
 
 const Footer = () => {
@@ -24,6 +24,26 @@ const Footer = () => {
               Your trusted partner for reliable and affordable car rental services in Lagos. 
               A division of Rolling Business Solution.
             </p>
+            <div className="flex items-center gap-4 mt-4">
+              <a 
+                href="https://www.facebook.com/share/16oaZbu16t/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.instagram.com/rolling_carrentals?igsh=MWZxbTJldzR0aWJjeA==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
