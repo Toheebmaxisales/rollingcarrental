@@ -13,6 +13,7 @@ import car8 from '@/assets/cars/car-8.jpeg';
 import car9 from '@/assets/cars/car-9.jpeg';
 import car10 from '@/assets/cars/car-10.jpeg';
 import car11 from '@/assets/cars/car-11.jpeg';
+import carHilux from '@/assets/cars/car-hilux.jpeg';
 
 const allCars = [
   {
@@ -96,9 +97,18 @@ const allCars = [
     price: 'From ₦50,000/day',
     description: 'Modern high-roof bus with premium comfort features.',
   },
+  {
+    id: 10,
+    name: 'Toyota Hilux Pickup',
+    category: 'Pickup',
+    image: carHilux,
+    features: { seats: 5, fuel: 'Diesel', transmission: 'Manual' },
+    price: 'From ₦45,000/day',
+    description: 'Rugged pickup truck ideal for rough terrain and cargo transport.',
+  },
 ];
 
-const categories = ['All', 'SUV', 'Luxury SUV', 'Sedan', 'Bus', 'Minivan'];
+const categories = ['All', 'SUV', 'Luxury SUV', 'Sedan', 'Bus', 'Minivan', 'Pickup'];
 
 const Cars = () => {
   const [activeCategory, setActiveCategory] = useState('All');
