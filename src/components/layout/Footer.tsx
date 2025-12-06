@@ -55,6 +55,7 @@ const Footer = () => {
                 { path: '/about', label: 'About Us' },
                 { path: '/cars', label: 'Our Cars' },
                 { path: '/contact', label: 'Contact' },
+                { path: '/terms', label: 'Terms & Conditions' },
               ].map((link) => (
                 <li key={link.path}>
                   <Link
