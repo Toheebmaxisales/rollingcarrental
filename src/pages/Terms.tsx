@@ -40,7 +40,7 @@ const Terms = () => {
             <FileText className="w-8 h-8 text-primary" />
           </div>
           <h1 className="heading-primary mb-4 text-secondary-foreground">Terms and Conditions</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Please read these terms carefully before booking our services. These guidelines ensure smooth operations and clear expectations.
           </p>
         </div>
