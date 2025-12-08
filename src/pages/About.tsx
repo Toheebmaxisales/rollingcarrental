@@ -29,7 +29,7 @@ const values = [
 const locations = [
   {
     name: 'Head Office',
-    address: 'Poatson Complex, 254 Agege Motor Road, by Airport Bus Stop, Ikeja Lagos',
+    address: 'Poatson Complex, 254 Agege Motor Road by Airport Bus, Ikeja Lagos. H8RP+7Q9, Lagos 101233, Lagos',
   },
   {
     name: 'MMA1 Terminal',
@@ -38,10 +38,6 @@ const locations = [
   {
     name: 'MMA2 Terminal',
     address: 'MMA2 International Terminal, Lagos',
-  },
-  {
-    name: 'Additional Location',
-    address: 'H8RP+7Q9, Lagos 101233, Lagos',
   },
 ];
 
