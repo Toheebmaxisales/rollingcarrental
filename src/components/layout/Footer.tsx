@@ -100,7 +100,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                 <span className="text-sm text-secondary-foreground/80">
-                  Poatson Complex, 254 Agege Motor Road, Ikeja Lagos
+                  Poatson Complex, 254 Agege Motor Road by Airport Bus, Ikeja Lagos. H8RP+7Q9, Lagos 101233, Lagos
                 </span>
               </li>
               <li className="flex items-start gap-3">
