@@ -14,7 +14,7 @@ const featuredCars = [
     category: 'SUV',
     image: car1,
     features: { seats: 7, fuel: 'Petrol', transmission: 'Automatic' },
-    price: 'From ₦50,000/day',
+    price: '₦150,000/day',
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const featuredCars = [
     category: 'Luxury SUV',
     image: car2,
     features: { seats: 7, fuel: 'Petrol', transmission: 'Automatic' },
-    price: 'From ₦80,000/day',
+    price: '₦250,000/day',
   },
   {
     id: 3,
@@ -30,15 +30,15 @@ const featuredCars = [
     category: 'Sedan',
     image: car3,
     features: { seats: 5, fuel: 'Petrol', transmission: 'Automatic' },
-    price: 'From ₦35,000/day',
+    price: '₦100,000/day',
   },
   {
     id: 4,
-    name: 'Toyota Hiace Bus',
+    name: 'Toyota Hiace Low Roof',
     category: 'Bus',
     image: car8,
     features: { seats: 14, fuel: 'Diesel', transmission: 'Manual' },
-    price: 'From ₦45,000/day',
+    price: '₦120,000/day',
   },
 ];
 
