@@ -59,8 +59,7 @@ const About = () => {
               Your Trusted <span className="text-primary">Car Rental</span> Partner in Lagos
             </h1>
             <p className="text-secondary-foreground/80 text-lg animate-slide-up delay-100">
-              Rolling Car Rental, a division of Rolling Business Solution, has been providing premium 
-              car rental services across Lagos with a commitment to quality, reliability, and customer satisfaction.
+              Rolling Car Rental – Your Trusted Mobility Partner in Lagos. As a premier division of Rolling Business Solution, we provide premier car rentals across sedans, 14-seater buses, and luxury SUVs like the Toyota Land Cruiser V8 and Prado. Located at the heart of the Lagos airport transport hub in Ikeja, our professional chauffeurs ensure your journey is smooth and secure. We are your best plug for car rentals in Lekki, Victoria Island, and Ikeja, whether you are arriving in Lagos from Abuja, Port Harcourt, Calabar, London, or beyond for official and social functions. More reliable than standard ride-hailing apps, your safety is fully guaranteed with comprehensive vehicle insurance and 24/7 customer support.
             </p>
           </div>
         </div>
